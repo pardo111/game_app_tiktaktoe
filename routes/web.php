@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\PartidaController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -15,6 +14,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/x0', ['\public\x0\index.html'])->name('game');
+Route::get('/x0', ['\public\x0\index.html'])->name('x0');
 
-Route::resource('/partidas',PartidaController::class);
+
+Route:: get('/ppt',['\public\ppt\index.php'])->name('ppt');

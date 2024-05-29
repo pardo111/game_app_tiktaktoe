@@ -18,9 +18,12 @@
     <body class="font-sans antialiased dark:bg-black dark:text-white/50">
 
                     <header class="grid grid-cols-2 items-center gap-2 py-10 lg:grid-cols-3">
+      
+                    
+
 
                         @if (Route::has('login'))
-                            <nav class="-mx-3 flex flex-1 justify-end">
+                            <nav class="-mx-3 flex flex-1 center">
                                 @auth
                                     <a
                                         href="{{ url('/dashboard') }}"
@@ -82,9 +85,9 @@ width: 100%;
 height: 100%;
 z-index: 1;
 }
-header{
-    padding-right: 1000px;
-}
 
+header nav{
+    width: 100%;
+}
 </style>
 </html>

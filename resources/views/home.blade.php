@@ -26,7 +26,6 @@
             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                 @csrf
             </form>
-            <!--    <li><a href="{{route('game')}}">play</a></li>-->
         </ul>
     </nav>
 
@@ -34,32 +33,34 @@
 </header>
 
 <body>
+        <div id="box">
+            <div id="x0" href="{{route('x0')}}" onclick="event.preventDefault();
+                                             document.getElementById('x0-form').submit();">
+                <video src="{{asset('storage/home/back.mp4')}}" autoplay="true" loop="true" muted="true" poster="/resources/img/home/back.mp4">
+                </video>
 
+                <form id="x0-form" action="{{ route('x0' )}}" method="POST" class="d-none">
+                    @csrf
+                </form>
 
-    <div id="box">
-        <div id="x0" href="{{route('game')}}" onclick="event.preventDefault();
-                                             document.getElementById('play-form').submit();">
-            <video src="{{asset('storage/home/back.mp4')}}" autoplay="true" loop="true" muted="true" poster="/resources/img/home/back.mp4">
-            </video>
-        </div>
+            </div>
+            <div id="ppt" href="{{ route('ppt') }}" onclick="event.preventDefault();
+                                             document.getElementById('ppt-form').submit();">
+                <video src="{{asset('storage/home/ppt.mp4')}}" autoplay="true" loop="true" muted="true" poster="/resources/img/home/back.mp4">
+                </video>
+            </div>
 
-
-        <div id="ppt">
-            <img src="{{ asset('storage/home/meme.png')}}">
-            <form id="play-form" action="{{ route('game') }}" method="POST" class="d-none">
+            <form id="ppt-form" action="{{ route('ppt') }}" method="POST" class="d-none">
                 @csrf
             </form>
         </div>
-        </img>
-    </div>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+        <video id="video_background" src="{{asset('storage/home/homeb.mp4')}}" autoplay="true" loop="true" mute="true">
 
-    <video id="video_background" src="{{asset('storage/home/homeb.mp4')}}" autoplay="true" loop="true" mute="true">
-
-    </video>
+        </video>
 </body>
 <style>
     #video_background {
@@ -85,7 +86,7 @@
         z-index: 1;
     }
 
-    #ppt img {
+    #ppt video {
         -webkit-transition: all .9s ease;
         /* Safari y Chrome */
         -moz-transition: all .9s ease;
@@ -94,11 +95,13 @@
         /* IE 9 */
         -ms-transition: all .9s ease;
         /* Opera */
-        width: 100%;
+        width: 130%;
         border-radius: 10px;
+margin-left: -12%;
+        height: 110%;
     }
 
-    #ppt:hover img {
+    #ppt:hover video {
         -webkit-transform: scale(1.25);
         -moz-transform: scale(1.25);
         -ms-transform: scale(1.25);
@@ -111,6 +114,7 @@
         width: 300px;
         overflow: hidden;
         cursor: pointer;
+        padding:0px 10px 0px 10px;
 
     }
 
@@ -142,6 +146,7 @@
         width: 300px;
         overflow: hidden;
         cursor: pointer;
+        padding:0px 0px 0px 10px;
 
     }
 
@@ -156,6 +161,7 @@
         width: 100%;
         justify-content: space-evenly;
         padding: 10% 0% 0% 0%;
+        flex-wrap: wrap;
     }
 
 
@@ -227,8 +233,6 @@
         color: #fff;
         font-size: 55px;
     }
-
-
 </style>
 
 </html>

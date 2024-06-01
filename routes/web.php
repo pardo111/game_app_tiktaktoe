@@ -12,9 +12,9 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/x0', ['\public\x0\index.html'])->name('x0');
+Auth::routes();
 
 
 Route:: get('/ppt',['\public\ppt\index.php'])->name('ppt');

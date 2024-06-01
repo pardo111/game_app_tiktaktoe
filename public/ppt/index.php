@@ -7,8 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Piedra | Papel | Tijerass</title>
 </head>
-
 <body>
+    
+
+
+
     <h1>Piedra, Papel , Tijeras</h1>
     <div id="campo-batalla" class="campo-batalla">
         <div id="img-ataque-jugador" class="caja-batala"><!--<img class="img-batalla" src="assets/Papel.PNG" alt="">-->

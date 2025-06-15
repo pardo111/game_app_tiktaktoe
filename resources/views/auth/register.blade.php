@@ -30,32 +30,32 @@
                   <div class="alert alert-danger">
                     <ul>
 
-                    @foreach($errors->all() as $e)
+                      @foreach($errors->all() as $e)
 
 
-<li>{{$e}}</li>
-@endforeach
+                      <li>{{$e}}</li>
+                      @endforeach
                     </ul>
                   </div>
-                   @endif
+                  @endif
                   <div data-mdb-input-init class="form-outline mb-4">
-                    <input id="name" type="text" name="name" class="form-control form-control-lg" value="{{old('name')}}"/>
+                    <input id="name" type="text" name="name" class="form-control form-control-lg" value="{{old('name')}}" />
                     <label class="form-label" for="typeEmailX-2">nombre</label>
                   </div>
 
                   <div data-mdb-input-init class="form-outline mb-4">
-                    <input id="email" type="email" name="email" class="form-control form-control-lg"value="{{old('email')}}" />
+                    <input id="email" type="email" name="email" class="form-control form-control-lg" value="{{old('email')}}" />
                     <label class="form-label" for="typeEmailX-2">Email</label>
                   </div>
 
                   <div data-mdb-input-init class="form-outline mb-4">
-                    <input id="password" type="password" name="password" class="form-control form-control-lg" value="{{old('password')}}"/>
+                    <input id="password" type="password" name="password" class="form-control form-control-lg" value="{{old('password')}}" />
                     <label class="form-label" for="typePasswordX-2">Contraseña</label>
                   </div>
 
 
                   <div data-mdb-input-init class="form-outline mb-4">
-                    <input id="password_confirmation" type="password" name="password_confirmation" class="form-control form-control-lg" value="{{old('password_confirmation')}}"/>
+                    <input id="password_confirmation" type="password" name="password_confirmation" class="form-control form-control-lg" value="{{old('password_confirmation')}}" />
                     <label class="form-label" for="typePasswordX-2">Confirmar Contraseña</label>
                   </div>
 

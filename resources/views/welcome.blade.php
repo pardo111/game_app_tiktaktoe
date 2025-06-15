@@ -87,7 +87,6 @@
 <style>
 #myVideo {
     position: fixed;
-
   right: 0;
   bottom: 0;
   min-width: 100%;

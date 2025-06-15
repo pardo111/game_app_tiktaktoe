@@ -14,7 +14,6 @@ Auth::routes();
 
 
 Route::get('/x0', ['\public\x0\index.html'])->name('x0');
-Auth::routes();
 
 
-Route:: get('/ppt',['\public\ppt\index.php'])->name('ppt');
+Route:: get('/ppt',['\public\ppt\index.html'])->name('ppt');

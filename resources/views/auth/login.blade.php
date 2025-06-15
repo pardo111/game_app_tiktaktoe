@@ -15,18 +15,7 @@
 
 <body>
   <header>
-    @if ($errors->any())
-        @foreach($errors->all() as $e)
-        <script>
-          Swal.fire({
-            icon: "error",
-            title: "Error de validacion",
-            text: "{{$e}}",
-          });
-        </script>
-        @endforeach
 
-    @endif
     <form action="{{route('login')}}" method="post">
       @csrf
 
@@ -37,8 +26,20 @@
               <div class="card shadow-2-strong" style="border-radius: 1rem;">
                 <div class="card-body p-5 text-center">
 
-                  <h3 class="mb-5">Sign in</h3>
+                  <h3 class="mb-5">Iniciar Sesion</h3>
 
+                  @if($errors->any())
+    <div class="alert alert-danger">
+      <ul>
+
+        @foreach($errors->all() as $e)
+
+
+        <li>{{$e}}</li>
+        @endforeach
+      </ul>
+    </div>
+    @endif
                   <div data-mdb-input-init class="form-outline mb-4">
                     <input type="email" name="email" id="typeEmailX-2" class="form-control form-control-lg" />
                     <label class="form-label" for="typeEmailX-2">Email</label>

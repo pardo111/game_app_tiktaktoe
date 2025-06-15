@@ -7,6 +7,7 @@ luego de clonar el repositorio se necesitan instalar dependencias
 para instalar dependencias de programa se necesita ejecutar en consola dentro del proyecto 
 "composer install"
 "npm install"
-"php artisan serve"
+para crear la base de datos: 
+"php artisan migrate"
 
 para ejecutar el programa se necesita ejecutar en una terminal npm run dev y en otra terminal php artisan serve el cual nos dara la url a conectarnos
